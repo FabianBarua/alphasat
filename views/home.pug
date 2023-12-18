@@ -1,8 +1,8 @@
 extends ./layout
 
 block content
-    div(class="w-full h-[35rem] flex " )
-        div(class=" w-80 flex flex-col justify-center")
+    div(class="w-full h-[35rem] flex flex-col-reverse lg:flex-row mt-16" )
+        div(class=" w-80 flex flex-col justify-center lg:mx-0 mx-auto ")
             h1(class="text-[84.75px] leading-none font-poppins font-bold") Tx Pro
             h2(class=" text-2xl font-poppins font-normal pl-3") A tecnologia mais recente, mais poderosa do que nunca!
             a(href="/txpro" class=" mt-3 w-full bg-pinkblack text-white rounded-2xl flex gap-3 items-center justify-center outline outline-4 outline-transparent hover:outline-pinkalpha/30 transition-all duration-300 active:translate-y-1 py-2 px-7 " )
@@ -14,24 +14,24 @@ block content
                 <div class="progress-bar hide" slot="progress-bar"> </div>
             </model-viewer>
                 
-    div(class=" h-32 relative w-5/6 mx-auto  flex items-center bg-pinkblack rounded-[46px] px-14 py-10  ")
-        p(class="text-3xl text-pinkalpha leading-none ") Design intuitivo e precisão 
+    div(class=" mxau relative w-5/6 mx-auto  flex items-center bg-pinkblack rounded-[46px] px-14 py-10 mt-24 lg:overflow-visible overflow-hidden ")
+        p(class="text-3xl text-pinkalpha leading-none z-10 lg:w-auto w-52") Design intuitivo e precisão 
             br
             span(class="text-white font-bold") excepcional!
-        img(src="/img/control.png", alt="control" class="absolute bottom-0 right-0")
+        img(src="/img/control.png", alt="control" class="absolute bottom-0 lg:right-0 -right-24 lg:rotate-0 -rotate-45")
         
     section(class="w-full mt-20")
         div(class="flex justify-center items-center gap-4")
             P(class="text-5xl font-bold ") Conteudos?
             img(src="/img/lentes.png", alt="lentes" class="")
 
-        ul(class=" mt-8 flex gap-16 justify-center items-end w-full -tracking-widest	")
+        ul(class=" overflow-hidden mt-8 flex lg:gap-16 gap-4 justify-center  w-full -tracking-widest flex-col lg:flex-row  items-center	")
             li(class="w-52 h-52 rounded-3xl bg-header flex flex-col justify-center items-center")
                 div(class="w-min flex flex-col justify-center items-center gap-2")
                     P(class="font-bold text-5xl leading-[.80]") +600
                     div(class=" w-full inline-block h-1 bg-pinkalpha ")
                     P(class="font-semibold text-3xl leading-[.80]") Canais
-            li(class=" w-60 h-60 rounded-3xl bg-gradient-to-b from-pinkalpha from-10% to-transparent to-90%  flex flex-col  pt-8 items-center text-white")
+            li(class=" w-60 h-60 rounded-3xl bg-gradient-to-b from-pinkalpha from-10% to-transparent to-90%  flex flex-col  pt-8 items-center text-white order-first  lg:order-none ")
                 P(class="font-bold text-8xl leading-[.80]") 15K
                 P(class="font-semibold text-5xl ") Filmes
             li(class="w-52 h-52 rounded-3xl bg-header flex flex-col justify-center items-center")
@@ -40,29 +40,29 @@ block content
                     div(class=" w-full inline-block h-1 bg-pinkalpha ")
                     P(class="font-semibold text-3xl leading-[.80]") Séries
 
-    section(class="w-full mt-28")
+    section(class="w-full lg:mt-28 mt-16 overflow-hidden")
         P(class="text-5xl font-bold text-center ") Seu esporte está aqui!
 
-        ul(class=" mt-14 w-[70%] mx-auto gap-7 text-center")
+        ul(class=" mt-14 lg:w-[70%] w-[90%] mx-auto gap-7 text-center")
             each _, i in Array(7)
                 img(src=`/img/e${i+1}.svg`, alt="logo", class=" w-40 m-2 inline")
 
     section(class="mt-24 w-4/5 mx-auto bg-pinkblack relative flex p-6  rounded-[46px] overflow-hidden")
-        p(class=" font-bold text-white text-3xl leading-none p-6") #1 Serviço
+        p(class=" font-bold text-white text-3xl leading-none p-6 text-center mx-auto lg:mx-0") #1 Serviço
             br
             span(class=" inline-flex text-pinkalpha  ") Estável do Brasil
-        div(class="flex-1 border-l-4 border-pinkalpha")
-        img(src="/img/alpha1.png", alt="alphaplay" class="h-full absolute top-0 right-0")
+        div(class="flex-1  lg:border-l-4 border-pinkalpha hidden lg:inline-block")
+        img(src="/img/alpha1.png", alt="alphaplay" class="h-full absolute top-0 right-0 hidden lg:inline-block")
 
-    section(class="w-full mt-28")
+    section(class="w-full mt-28 overflow-hidden")
         P(class="text-5xl font-bold text-center ") Pessoas que confiaram em nós
-        ul(class=" flex justify-center gap-6 mt-8")
-            li(class=" h-52 w-80 bg-[#AEAEAE33]  relative pt-16 rounded-3xl mt-24")
+        ul(class=" flex lg:flex-row flex-col items-center justify-center lg:gap-6 mt-8 ")
+            li(class=" h-52 w-80 bg-[#AEAEAE33]  relative pt-16 rounded-3xl lg:mt-24 mt-9")
                 div(class="h-24 w-24 bg-black absolute -top-11 right-1/2 translate-x-1/2 rounded-full  outline outline-8 outline-white overflow-hidden ")
                     img(src="/img/avatar.png", alt="avatar" class="w-full h-full " ) 
                 p(class="text-center font-semibold text-2xl") Lucio Pereira 
                 P(class=" text-base text-center  px-8") Suporte muito bom com alphasat, o melhor suporte de todos os tempos!
-            li(class=" h-52 w-80 bg-pinkalpha  relative pt-16 rounded-3xl mt-24 -translate-y-12")
+            li(class=" h-52 w-80 bg-pinkalpha  relative pt-16 rounded-3xl mt-24 -translate-y-12 lg:order-none order-first")
                 div(class="h-24 w-24 bg-black absolute -top-11 right-1/2 translate-x-1/2 rounded-full  outline outline-8 outline-white overflow-hidden ")
                     img(src="/img/avatar.png", alt="avatar" class="w-full h-full " ) 
                 p(class="text-center text-white font-semibold text-2xl") Lucio Pereira 
