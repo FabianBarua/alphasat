@@ -1,4 +1,21 @@
 extends ./layout
 
 block content
-    h1 TxPRO
+
+    <model-viewer id="model" class=" w-full h-[32rem]"  alt="Alphaplay" src="/model/alphaplay.glb" poster="/model/alphaplay.png" shadow-intensity="1" camera-controls touch-action="pan-y">
+        <div class="progress-bar hide" slot="progress-bar"> </div>
+    </model-viewer>
+    section(class="-translate-y-16 mx-auto  w-fit")
+        h1(class=" text-center font-extrabold text-7xl") TX PRO
+        hr(class=" border-2 rounded-lg border-beach")
+        h2(class="text-base text-center") O design que você 
+            strong já conhece
+            |, agora
+            br
+            | com maior desempenho!
+        
+    section(class="bg-beach w-[99vw] h-96 relative -right-1/2 -translate-x-1/2 mb-4")
+        div(class="max-w-6xl h-96 mx-auto py-11 px-3")
+            div(class=" bg-cacao lg:w-32 w-24 h-full rounded-full ")
+                img(src="/img/txpro.png ", alt="" class="absolute top-1/2 -translate-y-1/2 w-48 md:w-72 lg:w-96 ")
+        
